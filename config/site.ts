@@ -11,7 +11,7 @@ export const siteConfig = {
     },
     {
       title: "CV",
-      href: "/",
+      href: "/cv",
     },
   ],
   links: {
