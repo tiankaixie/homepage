@@ -95,9 +95,9 @@ export default function CV() {
             <p className="text-justify text-sm text-gray-400">
               Work as a research assistant for the VADER Lab with the research
               topics in Explainable AI and Visual Analytics. Current
-              dissertation topic is 'Explaining the vulnerabilities of machine
-              learning models through visual analytics'. Passed dissertation
-              prospectus in Fall 2021.
+              dissertation topic is &apos;Explaining the vulnerabilities of
+              machine learning models through visual analytics&apos;. Passed
+              dissertation prospectus in Fall 2021.
             </p>
             <div className="py-1">
               <img
@@ -263,6 +263,81 @@ export default function CV() {
             </h4>
           </div>
 
+          {/* Invited Talks Section */}
+          <div></div>
+          <div className="col-span-4">
+            <h1 className="pt-8 text-3xl font-medium">Invited Talks</h1>
+          </div>
+
+          {/* FairrankVis */}
+          <div className="pr-4  text-right">
+            <p className="py-4 text-xs font-light">October 2021</p>
+          </div>
+          <div className="col-span-4">
+            <h3 className="pt-3 text-sm font-medium">
+              FairRankVis: A Visual Analytics Framework for Exploring
+              Algorithmic Fairness in Graph Mining Models
+            </h3>
+            <h4 className="text-sm font-light italic">
+              IEEE Transactions on Visualization and Computer Graphics, 2021{" "}
+            </h4>
+          </div>
+
+          {/* Auditing */}
+          <div className="pr-4  text-right">
+            <p className="py-4 text-xs font-light">October 2020</p>
+          </div>
+          <div className="col-span-4">
+            <h3 className="pt-3 text-sm font-medium">
+              Auditing the Sensitivity of Graph-based Ranking with Visual
+              Analytics
+            </h3>
+            <h4 className="text-sm font-light italic">
+              IEEE Transactions on Visualization and Computer Graphics, 2020{" "}
+            </h4>
+          </div>
+
+          {/* AML */}
+          <div className="pr-4  text-right">
+            <p className="py-4 text-xs font-light">October 2019</p>
+          </div>
+          <div className="col-span-4">
+            <h3 className="pt-3 text-sm font-medium">
+              Explaining Vulnerabilities to Adversarial Machine Learning through
+              Visual Analytics
+            </h3>
+            <h4 className="text-sm font-light italic">
+              IEEE Transactions on Visualization and Computer Graphics, 2019{" "}
+            </h4>
+          </div>
+
+          {/* Invited Talks Section */}
+          <div></div>
+          <div className="col-span-4">
+            <h1 className="pt-8 text-3xl font-medium">Professional Services</h1>
+          </div>
+
+          {/* FairrankVis */}
+          <div className="pr-4 text-right text-xs font-light ">
+            <p className="pt-4">2020 - 2023</p>
+          </div>
+          <div className="col-span-4">
+            <h3 className="pt-3 text-sm font-medium">
+              Reviewer of IEEE Transactions on Visualization and Computer
+              Graphics
+            </h3>
+          </div>
+
+          {/* Auditing */}
+          <div className="pr-4  text-right">
+            <p className="py-4 text-xs font-light">2022</p>
+          </div>
+          <div className="col-span-4">
+            <h3 className="pt-3 text-sm font-medium">
+              Reviewer of IEEE Computer Graphics & Applications
+            </h3>
+          </div>
+
           {/* Reference Section */}
           <div></div>
           <div className="col-span-4">
@@ -271,14 +346,14 @@ export default function CV() {
 
           <div></div>
           <div className="col-span-4">
-            <p className="text-sm pt-3">
+            <p className="pt-3 text-sm">
               Dr. Ross Maciejewski,{" "}
               <span className="font-light">Professor</span>
             </p>
             <p className="text-sm font-light text-gray-500">
               The School of Computing and Augmented Intelligence (SCAI)
             </p>
-            <p className="font-light text-sm italic text-gray-500">
+            <p className=" text-sm font-light italic text-gray-500">
               Arizona State University
             </p>
             <div className="py-1">
