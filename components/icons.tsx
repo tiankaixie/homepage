@@ -1,6 +1,7 @@
 import {
   GraduationCap,
   Instagram,
+  Link2,
   LucideProps,
   Moon,
   SunMedium,
@@ -16,6 +17,7 @@ export const Icons = {
   twitter: Twitter,
   scholar: GraduationCap,
   instagram: Instagram,
+  link: Link2,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path

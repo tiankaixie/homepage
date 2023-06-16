@@ -4,6 +4,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
+import { Icons } from "@/components/icons"
 
 export default function CV() {
   return (
@@ -100,10 +101,7 @@ export default function CV() {
               dissertation prospectus in Fall 2021.
             </p>
             <div className="py-1">
-              <img
-                className="inline w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              />
+              <Icons.link className="inline w-6" />
               <span className="pl-1">
                 <a
                   className="text-xs font-light text-sky-700"
@@ -137,10 +135,7 @@ export default function CV() {
               into the DiME visual analytics platform.
             </p>
             <div className="py-1">
-              <img
-                className="inline w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              />
+              <Icons.link className="inline w-6" />
               <span className="pl-1">
                 <a
                   className="text-xs font-light text-sky-700"
@@ -172,10 +167,7 @@ export default function CV() {
               company.
             </p>
             <div className="py-1">
-              <img
-                className="inline w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              />
+              <Icons.link className="inline w-6" />
               <span className="pl-1">
                 <a
                   className="text-xs font-light text-sky-700"
@@ -357,10 +349,7 @@ export default function CV() {
               Arizona State University
             </p>
             <div className="py-1">
-              <img
-                className="inline w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              />
+              <Icons.link className="inline w-6" />
               <span className="pl-1">
                 <a
                   className="text-xs font-light text-sky-700"
@@ -384,10 +373,7 @@ export default function CV() {
               Arizona State University
             </p>
             <div className="py-1">
-              <img
-                className="inline w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              />
+              <Icons.link className="inline w-6" />
               <span className="pl-1">
                 <a
                   className="text-xs font-light text-sky-700"
@@ -412,10 +398,7 @@ export default function CV() {
               University of Illinois at Urbana-Champaign
             </p>
             <div className="py-1">
-              <img
-                className="inline w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              />
+              <Icons.link className="inline w-6" />
               <span className="pl-1">
                 <a
                   className="text-xs font-light text-sky-700"
@@ -440,10 +423,7 @@ export default function CV() {
               Arizona State University
             </p>
             <div className="py-1">
-              <img
-                className="inline w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              />
+              <Icons.link className="inline w-6" />
               <span className="pl-1">
                 <a
                   className="text-xs font-light text-sky-700"
@@ -468,10 +448,7 @@ export default function CV() {
               Southern University of Science and Technology
             </p>
             <div className="py-1">
-              <img
-                className="inline w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              />
+              <Icons.link className="inline w-6" />
               <span className="pl-1">
                 <a
                   className="text-xs font-light text-sky-700"
@@ -496,10 +473,7 @@ export default function CV() {
               University of Virginia
             </p>
             <div className="py-1">
-              <img
-                className="inline w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              />
+              <Icons.link className="inline w-6" />
               <span className="pl-1">
                 <a
                   className="text-xs font-light text-sky-700"
