@@ -19,7 +19,7 @@ export default function CV() {
 
           {/* Ph.D. */}
           <div className="pr-4 text-right text-xs font-light text-gray-500">
-            <p className="pt-4">Present</p>
+            <p className="pt-4">August 2023</p>
             <p className="">|</p>
             <p className="">August 2018</p>
           </div>
@@ -77,9 +77,37 @@ export default function CV() {
             <h1 className="pt-8 text-3xl font-medium">Experience</h1>
           </div>
 
-          {/* GSA */}
           <div className="pr-4 text-right text-xs font-light text-gray-500">
             <p className="pt-4">Present</p>
+            <p className="">|</p>
+            <p className="">August 2023</p>
+          </div>
+          <div className="col-span-4">
+            <h3 className="pt-3 text-base font-bold">
+              Postdoctoral Research Scholar
+            </h3>
+            <h4 className="text-base">
+              VADER Lab, Arizona State University, Tempe, AZ{" "}
+            </h4>
+            <p className="text-justify text-sm text-gray-400">
+              Work as a Postdoctoral research scholar at the VADER Lab
+            </p>
+            <div className="py-1">
+              <Icons.link className="inline w-6" />
+              <span className="pl-1">
+                <a
+                  className="text-xs font-light text-sky-700"
+                  href="https://vader.lab.asu.edu/"
+                >
+                  VADER Lab
+                </a>
+              </span>
+            </div>
+          </div>
+
+          {/* GSA */}
+          <div className="pr-4 text-right text-xs font-light text-gray-500">
+            <p className="pt-4">August 2023</p>
             <p className="">|</p>
             <p className="">August 2018</p>
           </div>
@@ -94,11 +122,10 @@ export default function CV() {
               <span className="text-gray-400">Advisor:</span> Ross Maciejewski
             </p>
             <p className="text-justify text-sm text-gray-400">
-              Work as a research assistant for the VADER Lab with the research
-              topics in Explainable AI and Visual Analytics. Current
+              Work as a graduate research associate at the VADER Lab with the
+              research topics in Explainable AI and Visual Analytics. The
               dissertation topic is &apos;Explaining the vulnerabilities of
-              machine learning models through visual analytics&apos;. Passed
-              dissertation prospectus in Fall 2021.
+              machine learning models through visual analytics.
             </p>
             <div className="py-1">
               <Icons.link className="inline w-6" />
