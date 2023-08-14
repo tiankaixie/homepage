@@ -11,12 +11,13 @@ export default function IndexPage() {
           Tiankai Xie
         </h1>
         <p className="max-w-[700px] text-sm text-muted-foreground">
-          Ph.D. Candidate (Interpretable AI / HCI / Visual Analytics)
+          Postdoctoral Research Scholar (Interpretable AI / HCI / Visual
+          Analytics)
         </p>
         <p>
-          I am currently a Ph.D. candidate in computer science at Arizona State
-          University. My research is to increase the transparency and
-          interpretability of machine learning models by designing and
+          I am currently a postdoctoral research scholar in computer science at
+          Arizona State University. My research is to increase the transparency
+          and interpretability of machine learning models by designing and
           developing interactive visual analytics systems that can facilitate
           users to explore and discover potential vulnerabilities of those
           models in terms of adversarial machine learning, graph mining
