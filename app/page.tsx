@@ -15,13 +15,20 @@ export default function IndexPage() {
           Analytics)
         </p>
         <p>
-          I am currently a postdoctoral research scholar in computer science at
-          Arizona State University. My research is to increase the transparency
-          and interpretability of machine learning models by designing and
-          developing interactive visual analytics systems that can facilitate
-          users to explore and discover potential vulnerabilities of those
-          models in terms of adversarial machine learning, graph mining
-          sensitivity, as well as algorithmic fairness.
+          I am currently a dedicated Postdoctoral Research Scholar of Arizona
+          State University. My intellectual pursuits revolve around the
+          captivating convergence of Interpretable Machine Learning,
+          Human-Computer Interaction, and Visual Analytics. My mission is to
+          unravel the intricate layers of technology, ensuring its accessibility
+          through transparent AI algorithms. Simultaneously, I&apos;m committed
+          to crafting seamless interfaces that enrich Human-Computer
+          Interaction, creating intuitive connections between users and digital
+          systems. Moreover, my expertise extends to the realm of Visual
+          Analytics, where I meticulously decipher intricate data patterns to
+          facilitate insightful decision-making. With an unwavering commitment
+          to pioneering research and engineering innovation, I ardently envision
+          a future where technology fosters unity rather than division, shaping
+          a landscape where innovation harmonizes with human understanding.
         </p>
         <p>
           At Arizona State University, I work with Dr.{" "}
