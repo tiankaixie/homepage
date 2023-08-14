@@ -30,17 +30,17 @@ export default function IndexPage() {
           a future where technology fosters unity rather than division, shaping
           a landscape where innovation harmonizes with human understanding.
         </p>
-        <p>
-          At Arizona State University, I work with Dr.{" "}
-          <Link href={siteConfig.links.ross}>Ross Maciejewski</Link> as a member
-          of the <Link href={siteConfig.links.vader}>VADER lab</Link>. My
-          research is supported by the U.S. Department of Homeland Security and
-          the{" "}
-          <Link href={siteConfig.links.nsf}>
-            National Science Foundation Program on Fairness in AI in
-            collaboration with Amazon.
-          </Link>
-        </p>
+        {/* <p> */}
+        {/*   At Arizona State University, I work with Dr.{" "} */}
+        {/*   <Link href={siteConfig.links.ross}>Ross Maciejewski</Link> as a member */}
+        {/*   of the <Link href={siteConfig.links.vader}>VADER lab</Link>. My */}
+        {/*   research is supported by the U.S. Department of Homeland Security and */}
+        {/*   the{" "} */}
+        {/*   <Link href={siteConfig.links.nsf}> */}
+        {/*     National Science Foundation Program on Fairness in AI in */}
+        {/*     collaboration with Amazon. */}
+        {/*   </Link> */}
+        {/* </p> */}
       </div>
       {/* <div className="flex gap-4"> */}
       {/*   <Link */}
