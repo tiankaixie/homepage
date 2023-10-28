@@ -10,8 +10,30 @@ export const siteConfig = {
       href: "/",
     },
     {
+      title: "About",
+      href: "/",
+    },
+    {
       title: "CV",
       href: "/cv",
+    },
+  ],
+  socialNav: [
+    {
+      title: "Google Scholar",
+      href: "https://scholar.google.com/citations?user=iGRSrJUAAAAJ&hl=en&inst=1960582506653781529&oi=ao",
+    },
+    {
+      title: "Twitter",
+      href: "https://twitter.com/tiankaixie",
+    },
+    {
+      title: "GitHub",
+      href: "https://github.com/tiankaixie",
+    },
+    {
+      title: "Instagram",
+      href: "https://www.instagram.com/tiankaixie/",
     },
   ],
   links: {

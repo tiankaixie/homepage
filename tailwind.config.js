@@ -58,7 +58,25 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["Aktiv Grotesk", "var(--font-sans)", ...fontFamily.sans],
+      },
+      fontSize: {
+        "2xs": "0.625rem",
+        xs: "0.75rem",
+        sm: "0.925rem",
+        md: "1rem",
+        lg: "1.125rem",
+        xl: "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.75rem",
+        "4xl": "2.275rem",
+      },
+      fontWeight: {
+        light: 300,
+        normal: 450,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
       },
       keyframes: {
         "accordion-down": {

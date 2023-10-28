@@ -4,7 +4,9 @@ import Link from "next/link"
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
+import { Icons, generateIcon } from "@/components/icons"
+
+import { buttonVariants } from "./ui/button"
 
 interface MainNavProps {
   items?: NavItem[]
@@ -12,13 +14,9 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   return (
-    <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
-        <span className="inline-block font-bold">{siteConfig.name}</span>
-      </Link>
+    <div className="">
       {items?.length ? (
-        <nav className="flex gap-6">
+        <nav className="flex flex-col gap-1">
           {items?.map(
             (item, index) =>
               item.href && (
@@ -26,11 +24,17 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
-                    item.disabled && "cursor-not-allowed opacity-80"
+                    "flex w-full justify-start text-primary-foreground opacity-80"
                   )}
                 >
-                  {item.title}
+                  <div
+                    className={buttonVariants({
+                      size: "sm",
+                    })}
+                  >
+                    {generateIcon(item.title)}
+                    <span className="ml-3 text-xs">{item.title}</span>
+                  </div>
                 </Link>
               )
           )}

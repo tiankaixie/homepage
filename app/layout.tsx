@@ -4,7 +4,8 @@ import { Metadata } from "next"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { SiteHeader } from "@/components/site-header"
+import Background from "@/components/background"
+import { SiteSider } from "@/components/site-sider"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -35,16 +36,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-primary font-sans antialiased",
           fontSans.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <SiteHeader />
-          <div className="relative flex min-h-screen flex-col">
+          {/* <Background /> */}
+          <SiteSider />
+          <div className="relative ml-56 flex h-[calc(100vh-1rem)] overflow-auto flex-col bg-background my-2 mr-2 shadow-sm rounded-md ">
             <div className="flex-1">{children}</div>
           </div>
-          <TailwindIndicator />
+          {/* <TailwindIndicator /> */}
         </ThemeProvider>
       </body>
     </html>

@@ -1,11 +1,14 @@
 import {
+  FileBadge,
   GraduationCap,
+  Home,
   Instagram,
   Link2,
   LucideProps,
   Moon,
   SunMedium,
   Twitter,
+  User,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -18,6 +21,9 @@ export const Icons = {
   scholar: GraduationCap,
   instagram: Instagram,
   link: Link2,
+  home: Home,
+  about: User,
+  cv: FileBadge,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path
@@ -34,4 +40,17 @@ export const Icons = {
       ></path>
     </svg>
   ),
+}
+
+export const generateIcon = (name: string) => {
+  if (name === "Home") return <Icons.home className="h-4 w-4" />
+  else if (name === "About") return <Icons.about className="h-4 w-4" />
+  else if (name === "CV") return <Icons.cv className="h-4 w-4" />
+  else if (name === "Twitter") return <Icons.twitter className="h-4 w-4" />
+  else if (name === "GitHub") return <Icons.gitHub className="h-4 w-4" />
+  else if (name === "Instagram") return <Icons.instagram className="h-4 w-4" />
+  else if (name === "Google Scholar")
+    return <Icons.scholar className="h-4 w-4" />
+  else if (name === "Link") return <Icons.link className="h-4 w-4" />
+  else return <Icons.logo className="h-4 w-4" />
 }

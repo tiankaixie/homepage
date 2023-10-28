@@ -5,16 +5,12 @@ import { buttonVariants } from "@/components/ui/button"
 
 export default function IndexPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="leading-tight tracking-tighter md:text-2xl">
-          Tiankai Xie
+    <section className="container mx-auto grid items-center gap-6 pb-8 pt-6 md:py-10">
+      <div className="flex flex-col items-start gap-2">
+        <h1 className="mb-3 text-primary-foreground font-semibold md:text-4xl   ">
+          About
         </h1>
-        <p className="max-w-[700px] text-sm text-muted-foreground">
-          Postdoctoral Research Scholar (Interpretable AI / HCI / Visual
-          Analytics)
-        </p>
-        <p>
+        <p className="text-sm font-normal">
           I am currently a dedicated Postdoctoral Research Scholar of Arizona
           State University. My intellectual pursuits revolve around the
           captivating convergence of Interpretable Machine Learning,
