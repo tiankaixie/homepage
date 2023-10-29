@@ -149,7 +149,35 @@ const ParticleVis = () => {
 
       gpuCompute = new GPUComputationRenderer(WIDTH, WIDTH, renderer)
       const dtPosition = gpuCompute.createTexture()
-      fillPosition(dtPosition)
+      // function fillPosition(texture: THREE.DataTexture) {
+      //   let theArray = texture.image.data
+      //   for (let i = 0; i < theArray.length; i += 4) {
+      //     let rand = Math.floor(Math.random() * faceNum)
+      //
+      //     let x = facePosition[rand * 3 + 0]
+      //     let y = facePosition[rand * 3 + 1]
+      //     let z = facePosition[rand * 3 + 2]
+      //
+      //     theArray[i + 0] = x
+      //     theArray[i + 1] = y
+      //     theArray[i + 2] = z
+      //     theArray[i + 3] = 1
+      //   }
+      // }
+      // fillPosition(dtPosition)
+      let theArray = dtPosition.image.data
+      for (let i = 0; i < theArray.length; i += 4) {
+        let rand = Math.floor(Math.random() * faceNum)
+
+        let x = facePosition[rand * 3 + 0]
+        let y = facePosition[rand * 3 + 1]
+        let z = facePosition[rand * 3 + 2]
+
+        theArray[i + 0] = x
+        theArray[i + 1] = y
+        theArray[i + 2] = z
+        theArray[i + 3] = 1
+      }
 
       positionVariable = gpuCompute.addVariable(
         "texturePosition",
@@ -170,22 +198,6 @@ const ParticleVis = () => {
 
       if (error !== null) {
         console.error(error)
-      }
-
-      function fillPosition(texture: THREE.DataTexture) {
-        let theArray = texture.image.data
-        for (let i = 0; i < theArray.length; i += 4) {
-          let rand = Math.floor(Math.random() * faceNum)
-
-          let x = facePosition[rand * 3 + 0]
-          let y = facePosition[rand * 3 + 1]
-          let z = facePosition[rand * 3 + 2]
-
-          theArray[i + 0] = x
-          theArray[i + 1] = y
-          theArray[i + 2] = z
-          theArray[i + 3] = 1
-        }
       }
 
       scene.add(planeMesh)
