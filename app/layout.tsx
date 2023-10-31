@@ -42,7 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {/* <Background /> */}
           <SiteSider />
-          <div className="relative ml-56 flex h-[calc(100vh-1rem)] overflow-auto flex-col bg-background my-2 mr-2 shadow-sm rounded-md ">
+          <div className="relative ml-[15rem] flex h-[calc(100vh-1rem)] overflow-auto flex-col bg-background my-2 mr-2 shadow-sm rounded-md ">
             <div className="flex-1">{children}</div>
           </div>
           {/* <TailwindIndicator /> */}

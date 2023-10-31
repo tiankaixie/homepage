@@ -30,6 +30,7 @@ export function MainNav({ items }: MainNavProps) {
                   <div
                     className={buttonVariants({
                       size: "sm",
+                      variant: "nav",
                     })}
                   >
                     {generateIcon(item.title)}
