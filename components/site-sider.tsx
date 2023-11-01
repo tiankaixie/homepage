@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteSider() {
   return (
-    <div className="fixed h-[calc(100vh-1rem)]  w-56 bg-primary flex flex-col top-0 m-2 p-2  ">
+    <div className="fixed flex flex-col w-56 h-[calc(100vh-1rem)]  bg-primary  top-0 m-2 p-2  ">
       <div className="">
         <Link href="/" className="flex items-center space-x-2">
           {/* <Icons.logo className="h-6 w-6" /> */}
@@ -19,6 +19,7 @@ export function SiteSider() {
         <MainNav items={siteConfig.mainNav} />
         <div className="text-xs font-semibold mt-4 mb-2 ml-2">Contact</div>
         <MainNav items={siteConfig.socialNav} />
+        <ThemeToggle />
       </div>
     </div>
   )

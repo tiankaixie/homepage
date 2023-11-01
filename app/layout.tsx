@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
@@ -42,7 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {/* <Background /> */}
           <SiteSider />
-          <div className="relative ml-[15rem] flex h-[calc(100vh-1rem)] overflow-auto flex-col bg-background my-2 mr-2 shadow-sm rounded-md ">
+          <div className="relative my-2 ml-[15rem] mr-2 flex h-[calc(100vh-1rem)] flex-col overflow-auto rounded-md bg-background shadow-sm ">
             <div className="flex-1">{children}</div>
           </div>
           {/* <TailwindIndicator /> */}
