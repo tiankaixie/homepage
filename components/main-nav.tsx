@@ -1,10 +1,13 @@
+"use client"
+
 import * as React from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Icons, generateIcon } from "@/components/icons"
+import { generateIcon, Icons } from "@/components/icons"
 
 import { buttonVariants } from "./ui/button"
 
@@ -13,6 +16,7 @@ interface MainNavProps {
 }
 
 export function MainNav({ items }: MainNavProps) {
+  const pathname = usePathname()
   return (
     <div className="">
       {items?.length ? (
@@ -28,10 +32,15 @@ export function MainNav({ items }: MainNavProps) {
                   )}
                 >
                   <div
-                    className={buttonVariants({
-                      size: "sm",
-                      variant: "nav",
-                    })}
+                    className={cn(
+                      buttonVariants({
+                        size: "sm",
+                        variant: "nav",
+                      }),
+                      `${
+                        pathname === item.href ? "bg-highlight shadow-md" : ""
+                      }`
+                    )}
                   >
                     {generateIcon(item.title)}
                     <span className="ml-3 text-xs">{item.title}</span>
