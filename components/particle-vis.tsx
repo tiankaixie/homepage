@@ -8,7 +8,9 @@ import Stats from "three/examples/jsm/libs/stats.module"
 
 import * as animations from "./helpers/animations"
 import { resizeRendererToDisplaySize } from "./helpers/responsiveness"
+
 import "./style.css"
+
 import { GPUComputationRenderer } from "three/examples/jsm/misc/GPUComputationRenderer"
 
 //Shader imports
@@ -278,40 +280,39 @@ const ParticleVis = () => {
     //   gui.close()
     // }
   }
+  function animate() {
+    requestAnimationFrame(animate)
+
+    // stats.update()
+
+    if (animation.enabled && animation.play) {
+      animations.rotate(planeMesh, clock, Math.PI / 3)
+      animations.bounce(planeMesh, clock, 1, 0.5, 0.5)
+    }
+
+    if (resizeRendererToDisplaySize(renderer)) {
+      const canvas = renderer.domElement
+      camera.aspect = canvas.clientWidth / canvas.clientHeight
+      camera.updateProjectionMatrix()
+    }
+
+    if (gpuCompute) {
+      gpuCompute.compute()
+
+      // Update uniforms
+      //@ts-ignore
+      planeMesh.material.uniforms.positionTexture.value =
+        gpuCompute.getCurrentRenderTarget(positionVariable).texture
+    }
+    // globalUniforms.uTime.value = clock.getElapsedTime()
+
+    cameraControls.update()
+
+    renderer.render(scene, camera)
+  }
   useEffect(() => {
     init()
     animate()
-
-    function animate() {
-      requestAnimationFrame(animate)
-
-      // stats.update()
-
-      if (animation.enabled && animation.play) {
-        animations.rotate(planeMesh, clock, Math.PI / 3)
-        animations.bounce(planeMesh, clock, 1, 0.5, 0.5)
-      }
-
-      if (resizeRendererToDisplaySize(renderer)) {
-        const canvas = renderer.domElement
-        camera.aspect = canvas.clientWidth / canvas.clientHeight
-        camera.updateProjectionMatrix()
-      }
-
-      if (gpuCompute) {
-        gpuCompute.compute()
-
-        // Update uniforms
-        //@ts-ignore
-        planeMesh.material.uniforms.positionTexture.value =
-          gpuCompute.getCurrentRenderTarget(positionVariable).texture
-      }
-      // globalUniforms.uTime.value = clock.getElapsedTime()
-
-      cameraControls.update()
-
-      renderer.render(scene, camera)
-    }
   }, []) // Empty dependency array ensures this effect runs once after the initial render
 
   return <canvas id={CANVAS_ID} />
