@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteSider() {
   return (
-    <div className="fixed top-0 m-2 flex h-[calc(100vh-1rem)] w-56 flex-col  justify-between bg-primary p-2  ">
+    <div className="fixed top-0 m-2 hidden h-[calc(100vh-1rem)] w-56  flex-col justify-between bg-primary p-2 lg:flex ">
       <div className="">
         <Link href="/" className="flex items-center space-x-2">
           {/* <Icons.logo className="h-6 w-6" /> */}

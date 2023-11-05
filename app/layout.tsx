@@ -5,6 +5,7 @@ import { Metadata } from "next"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import { SiteHeader } from "@/components/site-header"
 import { SiteSider } from "@/components/site-sider"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -42,8 +43,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {/* <Background /> */}
+          <SiteHeader />
           <SiteSider />
-          <div className="relative my-2 ml-[15rem] mr-2 flex h-[calc(100vh-1rem)] flex-col overflow-auto rounded-md bg-background shadow-sm ">
+          <div className="relative mx-2 mb-2 flex h-[calc(100vh-4rem)] flex-col overflow-auto rounded-md bg-background shadow-sm lg:ml-[15rem] lg:mt-2 lg:h-[calc(100vh-1rem)] ">
             <div className="flex-1">{children}</div>
           </div>
           {/* <TailwindIndicator /> */}
