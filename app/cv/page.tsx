@@ -4,10 +4,13 @@ import { Icons } from "@/components/icons"
 interface DateObject {
   properties: {
     Date: {
+      rich_text: {
+        plain_text: string
+      }[]
       date: {
         start: string
       }
-    }
+    } | null
   }
 }
 function compareDates(dateObject1: DateObject, dateObject2: DateObject) {
