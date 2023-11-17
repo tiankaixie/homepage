@@ -17,63 +17,7 @@ function compareDates(dateObject1: SectionItem, dateObject2: SectionItem) {
   }
 }
 
-interface SectionItem {
-  properties: {
-    Type: {
-      select: {
-        name: string
-      }
-    } | null
-    Date: {
-      rich_text: {
-        plain_text: string
-      }[]
-      date: {
-        start: string
-      }
-    }
-    Time: {
-      rich_text: {
-        plain_text: string
-      }[]
-    } | null
-    Name: {
-      title: {
-        plain_text: string
-      }[]
-    }
-    Location: {
-      rich_text: {
-        plain_text: string
-      }[]
-    } | null
-    Bullet1: {
-      rich_text: {
-        plain_text: string
-      }[]
-    } | null
-    Bullet2: {
-      rich_text: {
-        plain_text: string
-      }[]
-    } | null
-    Bullet3: {
-      rich_text: {
-        plain_text: string
-      }[]
-    } | null
-    Link: {
-      rich_text: {
-        plain_text: string
-      }[]
-    } | null
-    Link_Name: {
-      rich_text: {
-        plain_text: string
-      }[]
-    } | null
-  }
-}
+type SectionItem = any
 
 const buildSectionComponents = (sectionItems: SectionItem[]) => {
   return sectionItems.sort(compareDates).map((sectionItem) => {
