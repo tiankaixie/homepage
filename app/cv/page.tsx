@@ -10,7 +10,7 @@ interface DateObject {
       date: {
         start: string
       }
-    } | null
+    }
   }
 }
 function compareDates(dateObject1: DateObject, dateObject2: DateObject) {
