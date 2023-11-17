@@ -1,19 +1,7 @@
 import { getCVDatabase } from "@/lib/notion"
 import { Icons } from "@/components/icons"
 
-interface DateObject {
-  properties: {
-    Date: {
-      rich_text: {
-        plain_text: string
-      }[]
-      date: {
-        start: string
-      }
-    }
-  }
-}
-function compareDates(dateObject1: DateObject, dateObject2: DateObject) {
+function compareDates(dateObject1: SectionItem, dateObject2: SectionItem) {
   const dateString1 = dateObject1.properties.Date.date.start
   const dateString2 = dateObject2.properties.Date.date.start
   const date1 = new Date(dateString1)
@@ -43,7 +31,7 @@ interface SectionItem {
       date: {
         start: string
       }
-    } | null
+    }
     Time: {
       rich_text: {
         plain_text: string
@@ -94,7 +82,7 @@ const buildSectionComponents = (sectionItems: SectionItem[]) => {
       <>
         <div className="pr-4 text-right text-xs">
           <p className="pt-4">
-            {sectionItem.properties.Time.rich_text[0].plain_text}
+            {sectionItem.properties.Time?.rich_text[0].plain_text}
           </p>
         </div>
         <div className="col-span-4">
@@ -102,32 +90,32 @@ const buildSectionComponents = (sectionItems: SectionItem[]) => {
             {sectionItem.properties.Name.title[0].plain_text}
           </h3>
           <h4 className="text-sm">
-            {sectionItem.properties.Location.rich_text[0].plain_text}
+            {sectionItem.properties.Location?.rich_text[0].plain_text}
           </h4>
-          {sectionItem.properties.Bullet1.rich_text[0] && (
+          {sectionItem.properties.Bullet1?.rich_text[0] && (
             <p className="text-xs">
-              {sectionItem.properties.Bullet1.rich_text[0].plain_text}
+              {sectionItem.properties.Bullet1?.rich_text[0].plain_text}
             </p>
           )}
-          {sectionItem.properties.Bullet2.rich_text[0] && (
+          {sectionItem.properties.Bullet2?.rich_text[0] && (
             <p className="text-xs">
-              {sectionItem.properties.Bullet2.rich_text[0].plain_text}
+              {sectionItem.properties.Bullet2?.rich_text[0].plain_text}
             </p>
           )}
-          {sectionItem.properties.Bullet3.rich_text[0] && (
+          {sectionItem.properties.Bullet3?.rich_text[0] && (
             <p className="text-xs">
               {sectionItem.properties.Bullet3.rich_text[0].plain_text}
             </p>
           )}
-          {sectionItem.properties.Link.rich_text[0] && (
+          {sectionItem.properties.Link?.rich_text[0] && (
             <div className="py-1">
               <Icons.link className="inline w-4" />
               <span className="pl-1">
                 <a
                   className="text-xs text-sky-700"
-                  href="https://vader.lab.asu.edu/"
+                  href={sectionItem.properties.Link.rich_text[0].plain_text}
                 >
-                  {sectionItem.properties.Link_Name.rich_text[0].plain_text}
+                  {sectionItem.properties.Link_Name?.rich_text[0].plain_text}
                 </a>
               </span>
             </div>
@@ -146,7 +134,7 @@ const buildSectionComponentsSM = (sectionItems: SectionItem[]) => {
         <div className="pr-4  text-right">
           {sectionItem.properties.Date.rich_text && (
             <p className="py-4 text-xs ">
-              {sectionItem.properties.Time.rich_text[0].plain_text}
+              {sectionItem.properties.Time?.rich_text[0].plain_text}
             </p>
           )}
         </div>
@@ -154,17 +142,17 @@ const buildSectionComponentsSM = (sectionItems: SectionItem[]) => {
           <h3 className="pt-3 text-sm text-primary-foreground">
             {sectionItem.properties.Name.title[0].plain_text}
           </h3>
-          {sectionItem.properties.Bullet1.rich_text[0] && (
+          {sectionItem.properties.Bullet1?.rich_text[0] && (
             <p className="text-xs">
               {sectionItem.properties.Bullet1.rich_text[0].plain_text}
             </p>
           )}
-          {sectionItem.properties.Bullet2.rich_text[0] && (
+          {sectionItem.properties.Bullet2?.rich_text[0] && (
             <p className="text-xs italic">
               {sectionItem.properties.Bullet2.rich_text[0].plain_text}
             </p>
           )}
-          {sectionItem.properties.Link.rich_text[0] && (
+          {sectionItem.properties.Link?.rich_text[0] && (
             <div className="py-1">
               <Icons.link className="inline w-4" />
               <span className="pl-1">
@@ -172,7 +160,7 @@ const buildSectionComponentsSM = (sectionItems: SectionItem[]) => {
                   className="text-xs text-sky-700"
                   href="https://vader.lab.asu.edu/"
                 >
-                  {sectionItem.properties.Link_Name.rich_text[0].plain_text}
+                  {sectionItem.properties.Link_Name?.rich_text[0].plain_text}
                 </a>
               </span>
             </div>
@@ -187,46 +175,46 @@ export default async function CV() {
   const cv = await getCVDatabase()
 
   const education = cv.filter(
-    (item: SectionItem) => item.properties.Type.select.name === "education"
+    (item: SectionItem) => item.properties.Type?.select.name === "education"
   )
   const educationComponents = buildSectionComponents(education)
 
   const researchExperience = cv.filter(
     (item: SectionItem) =>
-      item.properties.Type.select.name === "research_experience"
+      item.properties.Type?.select.name === "research_experience"
   )
   const researchExperienceComponents =
     buildSectionComponents(researchExperience)
 
   const industryExperience = cv.filter(
     (item: SectionItem) =>
-      item.properties.Type.select.name === "industry_experience"
+      item.properties.Type?.select.name === "industry_experience"
   )
   const industryExperienceComponents =
     buildSectionComponents(industryExperience)
 
   const publications = cv.filter(
-    (item: SectionItem) => item.properties.Type.select.name === "publications"
+    (item: SectionItem) => item.properties.Type?.select.name === "publications"
   )
 
   const publicationsComponents = buildSectionComponentsSM(publications)
 
   const invitedTalks = cv.filter(
-    (item: SectionItem) => item.properties.Type.select.name === "invited_talks"
+    (item: SectionItem) => item.properties.Type?.select.name === "invited_talks"
   )
 
   const invitedTalksComponents = buildSectionComponentsSM(invitedTalks)
 
   const professionalServices = cv.filter(
     (item: SectionItem) =>
-      item.properties.Type.select.name === "professional_services"
+      item.properties.Type?.select.name === "professional_services"
   )
 
   const professionalServicesComponents =
     buildSectionComponentsSM(professionalServices)
 
   const references = cv.filter(
-    (item: SectionItem) => item.properties.Type.select.name === "reference"
+    (item: SectionItem) => item.properties.Type?.select.name === "reference"
   )
 
   const referencesComponents = buildSectionComponentsSM(references)
