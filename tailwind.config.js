@@ -64,10 +64,10 @@ module.exports = {
       fontFamily: {
         sans: ["Aktiv Grotesk", "var(--font-sans)", ...fontFamily.sans],
         title: [
-          "Babylonica",
-          "UnifrakturMaguntia",
           "CinzelDecorative",
           "LibreBarcode39Text",
+          "UnifrakturMaguntia",
+          "Babylonica",
         ],
       },
       fontSize: {

@@ -169,7 +169,7 @@ export default async function CV() {
           {/* Education Section */}
           <div></div>
           <div className="col-span-4">
-            <h1 className="text-3xl font-medium text-primary-foreground ">
+            <h1 className="text-xl font-normal text-primary-foreground ">
               Education
             </h1>
           </div>
@@ -179,7 +179,7 @@ export default async function CV() {
           {/* Experience Section */}
           <div></div>
           <div className="col-span-4">
-            <h1 className="pt-8 text-3xl font-medium text-primary-foreground">
+            <h1 className="pt-8 text-xl font-normal text-primary-foreground">
               Research Experience
             </h1>
           </div>
@@ -190,7 +190,7 @@ export default async function CV() {
 
           <div></div>
           <div className="col-span-4">
-            <h1 className="pt-8 text-3xl font-medium text-primary-foreground">
+            <h1 className="pt-8 text-xl font-normal text-primary-foreground">
               Industry Experience
             </h1>
           </div>
@@ -200,7 +200,7 @@ export default async function CV() {
           {/* Publication Section */}
           <div></div>
           <div className="col-span-4">
-            <h1 className="pt-8 text-3xl font-medium text-primary-foreground">
+            <h1 className="pt-8 text-xl font-normal text-primary-foreground">
               Publications
             </h1>
           </div>
@@ -210,7 +210,7 @@ export default async function CV() {
           {/* Invited Talks Section */}
           <div></div>
           <div className="col-span-4">
-            <h1 className="pt-8 text-3xl font-medium text-primary-foreground">
+            <h1 className="pt-8 text-xl font-normal text-primary-foreground">
               Invited Talks
             </h1>
           </div>
@@ -221,7 +221,7 @@ export default async function CV() {
 
           <div></div>
           <div className="col-span-4">
-            <h1 className="pt-8 text-3xl font-medium text-primary-foreground">
+            <h1 className="pt-8 text-xl font-normal text-primary-foreground">
               Professional Services
             </h1>
           </div>
@@ -231,7 +231,7 @@ export default async function CV() {
           {/* Reference Section */}
           <div></div>
           <div className="col-span-4">
-            <h1 className="pt-8 text-3xl font-medium text-primary-foreground">
+            <h1 className="pt-8 text-xl font-normal text-primary-foreground">
               Reference
             </h1>
           </div>

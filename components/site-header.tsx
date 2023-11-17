@@ -77,7 +77,7 @@ export function SiteHeader() {
       <div className="flex justify-between px-2">
         <Link href="/" className="flex items-center space-x-2">
           {/* <Icons.logo className="h-6 w-6" /> */}
-          <span className="font-title ml-4 mt-1 inline-block text-4xl text-primary-foreground">
+          <span className="font-title mb-2 ml-4 mt-3 inline-block text-xl font-light text-primary-foreground">
             {siteConfig.name}
           </span>
         </Link>

@@ -12,7 +12,7 @@ export function SiteSider() {
       <div className="">
         <Link href="/" className="flex items-center space-x-2">
           {/* <Icons.logo className="h-6 w-6" /> */}
-          <span className="font-title my-3 mb-5 ml-4 inline-block text-4xl text-primary-foreground">
+          <span className="font-title my-3 mb-5 ml-4 inline-block text-xl font-light  text-primary-foreground">
             {siteConfig.name}
           </span>
         </Link>

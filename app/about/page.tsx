@@ -3,7 +3,7 @@ export default function About() {
     <div>
       <section className="container mx-auto grid items-center gap-6 pb-8 pt-6 md:py-10">
         <div className="flex flex-col items-start gap-2">
-          <h1 className="mb-3 font-semibold text-primary-foreground md:text-4xl">
+          <h1 className="mb-3 font-normal text-primary-foreground md:text-xl">
             About
           </h1>
           <p className="text-sm font-normal">
