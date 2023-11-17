@@ -72,11 +72,11 @@ const buildSectionComponents = (sectionItems: SectionItem[]) => {
 
 const buildSectionComponentsSM = (sectionItems: SectionItem[]) => {
   return sectionItems.sort(compareDates).map((sectionItem) => {
-    // console.log(sectionItem.properties.Link.rich_text)
+    console.log(sectionItem.properties.Time)
     return (
       <>
         <div className="pr-4  text-right">
-          {sectionItem.properties.Date.rich_text && (
+          {sectionItem.properties.Time.rich_text[0] && (
             <p className="py-4 text-xs ">
               {sectionItem.properties.Time?.rich_text[0].plain_text}
             </p>
@@ -102,7 +102,7 @@ const buildSectionComponentsSM = (sectionItems: SectionItem[]) => {
               <span className="pl-1">
                 <a
                   className="text-xs text-sky-700"
-                  href="https://vader.lab.asu.edu/"
+                  href={sectionItem.properties.Link.rich_text[0].plain_text}
                 >
                   {sectionItem.properties.Link_Name?.rich_text[0].plain_text}
                 </a>
