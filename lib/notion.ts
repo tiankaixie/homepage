@@ -9,6 +9,5 @@ export async function getCVDatabase() {
   const response = await notion.databases.query({
     database_id: databaseId,
   })
-  console.log(response.results.length)
   return response.results
 }

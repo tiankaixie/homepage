@@ -32,7 +32,7 @@ interface SectionItem {
       select: {
         name: string
       }
-    }
+    } | null
     Date: {
       rich_text: {
         plain_text: string
@@ -40,12 +40,12 @@ interface SectionItem {
       date: {
         start: string
       }
-    }
+    } | null
     Time: {
       rich_text: {
         plain_text: string
       }[]
-    }
+    } | null
     Name: {
       title: {
         plain_text: string
@@ -55,32 +55,32 @@ interface SectionItem {
       rich_text: {
         plain_text: string
       }[]
-    }
+    } | null
     Bullet1: {
       rich_text: {
         plain_text: string
       }[]
-    }
+    } | null
     Bullet2: {
       rich_text: {
         plain_text: string
       }[]
-    }
+    } | null
     Bullet3: {
       rich_text: {
         plain_text: string
       }[]
-    }
+    } | null
     Link: {
       rich_text: {
         plain_text: string
       }[]
-    }
+    } | null
     Link_Name: {
       rich_text: {
         plain_text: string
       }[]
-    }
+    } | null
   }
 }
 
