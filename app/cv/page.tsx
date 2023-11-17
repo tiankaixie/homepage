@@ -1,7 +1,16 @@
 import { getCVDatabase } from "@/lib/notion"
 import { Icons } from "@/components/icons"
 
-function compareDates(dateObject1, dateObject2) {
+interface DateObject {
+  properties: {
+    Date: {
+      date: {
+        start: string
+      }
+    }
+  }
+}
+function compareDates(dateObject1: DateObject, dateObject2: DateObject) {
   const dateString1 = dateObject1.properties.Date.date.start
   const dateString2 = dateObject2.properties.Date.date.start
   const date1 = new Date(dateString1)
@@ -17,7 +26,65 @@ function compareDates(dateObject1, dateObject2) {
   }
 }
 
-const buildSectionComponents = (sectionItems) => {
+interface SectionItem {
+  properties: {
+    Type: {
+      select: {
+        name: string
+      }
+    }
+    Date: {
+      rich_text: {
+        plain_text: string
+      }[]
+      date: {
+        start: string
+      }
+    }
+    Time: {
+      rich_text: {
+        plain_text: string
+      }[]
+    }
+    Name: {
+      title: {
+        plain_text: string
+      }[]
+    }
+    Location: {
+      rich_text: {
+        plain_text: string
+      }[]
+    }
+    Bullet1: {
+      rich_text: {
+        plain_text: string
+      }[]
+    }
+    Bullet2: {
+      rich_text: {
+        plain_text: string
+      }[]
+    }
+    Bullet3: {
+      rich_text: {
+        plain_text: string
+      }[]
+    }
+    Link: {
+      rich_text: {
+        plain_text: string
+      }[]
+    }
+    Link_Name: {
+      rich_text: {
+        plain_text: string
+      }[]
+    }
+  }
+}
+
+const buildSectionComponents = (sectionItems: SectionItem[]) => {
   return sectionItems.sort(compareDates).map((sectionItem) => {
     // console.log(sectionItem.properties.Link.rich_text)
     return (
@@ -68,7 +135,7 @@ const buildSectionComponents = (sectionItems) => {
   })
 }
 
-const buildSectionComponentsSM = (sectionItems) => {
+const buildSectionComponentsSM = (sectionItems: SectionItem[]) => {
   return sectionItems.sort(compareDates).map((sectionItem) => {
     // console.log(sectionItem.properties.Link.rich_text)
     return (
@@ -117,43 +184,46 @@ export default async function CV() {
   const cv = await getCVDatabase()
 
   const education = cv.filter(
-    (item) => item.properties.Type.select.name === "education"
+    (item: SectionItem) => item.properties.Type.select.name === "education"
   )
   const educationComponents = buildSectionComponents(education)
 
   const researchExperience = cv.filter(
-    (item) => item.properties.Type.select.name === "research_experience"
+    (item: SectionItem) =>
+      item.properties.Type.select.name === "research_experience"
   )
   const researchExperienceComponents =
     buildSectionComponents(researchExperience)
 
   const industryExperience = cv.filter(
-    (item) => item.properties.Type.select.name === "industry_experience"
+    (item: SectionItem) =>
+      item.properties.Type.select.name === "industry_experience"
   )
   const industryExperienceComponents =
     buildSectionComponents(industryExperience)
 
   const publications = cv.filter(
-    (item) => item.properties.Type.select.name === "publications"
+    (item: SectionItem) => item.properties.Type.select.name === "publications"
   )
 
   const publicationsComponents = buildSectionComponentsSM(publications)
 
   const invitedTalks = cv.filter(
-    (item) => item.properties.Type.select.name === "invited_talks"
+    (item: SectionItem) => item.properties.Type.select.name === "invited_talks"
   )
 
   const invitedTalksComponents = buildSectionComponentsSM(invitedTalks)
 
   const professionalServices = cv.filter(
-    (item) => item.properties.Type.select.name === "professional_services"
+    (item: SectionItem) =>
+      item.properties.Type.select.name === "professional_services"
   )
 
   const professionalServicesComponents =
     buildSectionComponentsSM(professionalServices)
 
   const references = cv.filter(
-    (item) => item.properties.Type.select.name === "reference"
+    (item: SectionItem) => item.properties.Type.select.name === "reference"
   )
 
   const referencesComponents = buildSectionComponentsSM(references)
