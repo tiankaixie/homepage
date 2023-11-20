@@ -69,6 +69,7 @@ module.exports = {
           "UnifrakturMaguntia",
           "Babylonica",
         ],
+        landing: ["NanumMyeongjo"],
       },
       fontSize: {
         "2xs": "0.625rem",

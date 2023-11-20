@@ -73,11 +73,11 @@ ListItem.displayName = "ListItem"
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full bg-primary lg:hidden">
+    <header className="sticky top-0 z-40 w-full">
       <div className="flex justify-between px-2">
         <Link href="/" className="flex items-center space-x-2">
           {/* <Icons.logo className="h-6 w-6" /> */}
-          <span className="font-title mb-2 ml-4 mt-3 inline-block text-xl font-light text-primary-foreground">
+          <span className=" mb-2 ml-4 mt-3 inline-block font-light text-primary-foreground">
             {siteConfig.name}
           </span>
         </Link>

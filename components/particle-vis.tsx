@@ -23,7 +23,7 @@ import vertexShader from "./shaders/vertexParticles.glsl"
 
 const ParticleVis = () => {
   const CANVAS_ID = "scene"
-  const WIDTH = 768
+  const WIDTH = 500
 
   //GPGPU
   let gpuCompute: GPUComputationRenderer
@@ -190,9 +190,9 @@ const ParticleVis = () => {
         value: globalUniforms.uTime,
       }
       positionVariable.material.uniforms.power = { value: 0.0 }
-      positionVariable.material.uniforms.frequency = { value: 0.35 }
-      positionVariable.material.uniforms.amplitude = { value: 0.9 }
-      positionVariable.material.uniforms.maxDistance = { value: 3 }
+      positionVariable.material.uniforms.frequency = { value: 0.85 }
+      positionVariable.material.uniforms.amplitude = { value: 0.4 }
+      positionVariable.material.uniforms.maxDistance = { value: 2 }
 
       positionVariable.wrapS = THREE.RepeatWrapping
       positionVariable.wrapT = THREE.RepeatWrapping

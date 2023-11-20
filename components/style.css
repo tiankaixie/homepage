@@ -1,5 +1,4 @@
 :root {
-  color-scheme: black;
   color: rgba(0, 0, 0, 0.87);
 
   font-synthesis: none;
@@ -18,4 +17,5 @@ canvas {
   height: 100%;
   width: 100%;
   outline: none;
+  background-color: #000;
 }

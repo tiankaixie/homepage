@@ -2,20 +2,40 @@ import ParticleVis from "@/components/particle-vis"
 
 export default function IndexPage() {
   return (
-    <div>
-      <div className="pb-10 pt-32">
-        <ParticleVis />
+    <section className=" mx-auto grid grid-cols-12 items-center gap-6 p-2">
+      <div className="col-span-12 flex h-96 items-end p-4 md:col-span-8 lg:col-span-6">
+        <p className="font-landing text-2xl font-medium text-foreground">
+          Tiankai Xie is a multidisciplinary researcher specializing in
+          Human-centered Artificial Intelligence. He is dedicated to designing
+          and developing the next-gen of interactive systems that empower
+          leveraging the power of data and automation.
+        </p>
       </div>
-      <section className="container mx-auto grid items-center gap-6 pb-8 pt-6 md:py-10">
-        <div className="flex flex-col items-start gap-2">
-          <p className="text-center text-sm font-normal">
-            My homepage is coming soon... credits to{" "}
-            <a href="https://github.com/AmirTru/curl-noise">@AmirTru</a> for the
-            particle visulization. In the meantime, you can check out my CV and
-            bio.
-          </p>
+      <div className="col-span-12 ">
+        <hr className="border-t-1" />
+      </div>
+      <div className="col-span-12">
+        <div className="grid grid-cols-4 gap-2">
+          {/* <div className="col-span-4  bg-primary p-4 md:col-span-2 lg:col-span-1"> */}
+          {/*   <div className="aspect-square p-4"></div> */}
+          {/*   <div>Articles </div> */}
+          {/* </div> */}
+          <div className="col-span-4  bg-primary p-4 md:col-span-2 lg:col-span-1">
+            <div className="aspect-square p-4">
+              <ParticleVis />
+            </div>
+            <div>Gallery (Coming soon)</div>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+      <div className="col-span-12 ">
+        <hr className="border-t-1" />
+      </div>
+      <div className="col-span-12 ">
+        <p className="text-center">
+          copy right © 2023 Tiankai Xie. All rights reserved.
+        </p>
+      </div>
+    </section>
   )
 }
