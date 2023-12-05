@@ -5,7 +5,6 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,11 +12,12 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
+
+import { HorizontalNav } from "./horizontal-nav"
 
 export function NavigationMenuHeader() {
   return (
@@ -25,18 +25,15 @@ export function NavigationMenuHeader() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
-            <Icons.menu className="h-4 w-4 rotate-0 scale-100 transition-all " />
+            <Icons.menu className="h-4 w-4 rotate-0 scale-100 " />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="w-[200px] bg-primary p-2">
+            <div className="w-[200px] p-2">
               <MainNav items={siteConfig.mainNav} />
               <div className="mb-2 ml-2 mt-4 text-xs font-semibold">
                 Contact
               </div>
               <MainNav items={siteConfig.socialNav} />
-              <div className="p-2">
-                <ThemeToggle />
-              </div>
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -76,12 +73,16 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 w-full">
       <div className="flex justify-between px-2">
         <Link href="/" className="flex items-center space-x-2">
-          {/* <Icons.logo className="h-6 w-6" /> */}
-          <span className=" mb-2 ml-4 mt-3 inline-block font-light text-primary-foreground">
+          <span className=" mb-2 ml-4 mt-3 inline-block font-light text-foreground">
             {siteConfig.name}
           </span>
         </Link>
-        <NavigationMenuHeader />
+        <div className="lg:hidden">
+          <NavigationMenuHeader />
+        </div>
+        <div className="hidden lg:block">
+          <HorizontalNav items={siteConfig.horizonalNav} />
+        </div>
       </div>
     </header>
   )

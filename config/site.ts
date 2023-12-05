@@ -4,11 +4,17 @@ export const siteConfig = {
   name: "TIANKAI XIE",
   description:
     "Beautifully designed components built with Radix UI and Tailwind CSS.",
-  mainNav: [
+  horizonalNav: [
     {
-      title: "Home",
-      href: "/",
+      title: "About",
+      href: "/about",
     },
+    {
+      title: "CV",
+      href: "/cv",
+    },
+  ],
+  mainNav: [
     {
       title: "About",
       href: "/about",
