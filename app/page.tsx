@@ -4,7 +4,7 @@ import { getHomepageItemsDatabase } from "@/lib/notion"
 import ParticleVis from "@/components/particle-vis"
 
 const buildHomepageItemComponents = (items: any) => {
-  return items.map((item: any, index) => {
+  return items.map((item: any) => {
     return (
       <div className="col-span-4 bg-primary p-4 md:col-span-2 lg:col-span-1">
         <div className="aspect-square p-24">
