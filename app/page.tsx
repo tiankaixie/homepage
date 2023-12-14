@@ -3,7 +3,7 @@ import Image from "next/image"
 import { getHomepageItemsDatabase } from "@/lib/notion"
 import ParticleVis from "@/components/particle-vis"
 
-const buildHomepageItemComponents = (items) => {
+const buildHomepageItemComponents = (items: any) => {
   return items.map((item, index) => {
     return (
       <div className="col-span-4 bg-primary p-4 md:col-span-2 lg:col-span-1">
