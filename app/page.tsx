@@ -9,7 +9,7 @@ const buildHomepageItemComponents = (items: any) => {
   return items.map((item: any) => {
     return (
       <div className="col-span-4 bg-primary p-4 md:col-span-2 lg:col-span-1">
-        <div className="flex aspect-square flex-col justify-center p-20">
+        <div className="flex aspect-square flex-col justify-center p-14 lg:p-20">
           <Image
             className="rounded-md shadow-md"
             src={item.properties.Image.files[0].file.url}
@@ -32,7 +32,7 @@ export default async function IndexPage() {
   return (
     <section className=" mx-auto grid grid-cols-12 items-center gap-6 p-6">
       <div className="container col-span-12 flex h-80 items-center justify-center text-center ">
-        <p className=" text-2xl font-light text-foreground">
+        <p className="text-md font-light text-foreground lg:text-2xl">
           Tiankai Xie is a multidisciplinary researcher specializing in
           Human-centered Artificial Intelligence. He is dedicated to designing
           and developing the next-gen of interactive systems that empower
