@@ -18,6 +18,7 @@ import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 import { HorizontalNav } from "./horizontal-nav"
+import { SocialNav } from "./social-nav"
 
 export function NavigationMenuHeader() {
   return (
@@ -73,7 +74,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 w-full">
       <div className="flex justify-between px-2">
         <Link href="/" className="flex items-center space-x-2">
-          <span className=" mb-2 ml-4 mt-3 inline-block font-light text-foreground">
+          <span className=" mb-2 ml-4 mt-3 inline-block font-light text-primary-foreground">
             {siteConfig.name}
           </span>
         </Link>

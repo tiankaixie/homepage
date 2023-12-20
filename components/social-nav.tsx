@@ -5,20 +5,22 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 import { NavItem } from "@/types/nav"
+import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { generateIcon, Icons } from "@/components/icons"
 
 import { buttonVariants } from "./ui/button"
 
-interface HorizontalNavProps {
+interface SocialNavProps {
   items?: NavItem[]
 }
 
-export function HorizontalNav({ items }: HorizontalNavProps) {
+export function SocialNav({ items }: SocialNavProps) {
   const pathname = usePathname()
   return (
-    <div className=" mr-3 mt-3 ">
+    <div className="">
       {items?.length ? (
-        <nav className="flex flex-row gap-1">
+        <nav className="flex justify-center gap-1">
           {items?.map(
             (item, index) =>
               item.href && (
@@ -26,21 +28,21 @@ export function HorizontalNav({ items }: HorizontalNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex w-full justify-start text-primary-foreground opacity-80"
+                    " justify-start text-primary-foreground opacity-80"
                   )}
                 >
                   <div
                     className={cn(
                       buttonVariants({
                         size: "sm",
-                        variant: "link",
+                        variant: "nav",
                       }),
-                      `${pathname === item.href ? "" : ""}`
+                      `${
+                        pathname === item.href ? "bg-highlight shadow-md" : ""
+                      }`
                     )}
                   >
-                    <span className="ml-3 text-sm font-light text-primary-foreground ">
-                      {item.title.toUpperCase()}
-                    </span>
+                    {generateIcon(item.title)}
                   </div>
                 </Link>
               )
