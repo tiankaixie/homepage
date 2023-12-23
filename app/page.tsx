@@ -5,27 +5,33 @@ import { getHomepageItemsDatabase } from "@/lib/notion"
 import { SocialNav } from "@/components/social-nav"
 
 const buildHomepageItemComponents = (items: any) => {
-  return items.map((item: any) => {
-    return (
-      <div className="col-span-12 bg-primary p-4 md:col-span-6 lg:col-span-6 xl:col-span-4">
-        <div className="flex aspect-square flex-col justify-center p-14 lg:p-20">
-          <Image
-            className="rounded-md shadow-md"
-            src={item.properties.Image.files[0].file.url}
-            alt="Picture of the author"
-            width={1792}
-            height={1024}
-          />
-        </div>
-        <div>{item.properties.Name.title[0]?.plain_text} (Coming Soon)</div>
-      </div>
+  return items
+    .sort(
+      (a, b) =>
+        a.properties.Name.title[0]?.plain_text.localeCompare(
+          b.properties.Name.title[0]?.plain_text
+        )
     )
-  })
+    .map((item: any) => {
+      return (
+        <div className="col-span-12 bg-primary p-4 md:col-span-6 lg:col-span-6 xl:col-span-4">
+          <div className="flex aspect-square flex-col justify-center p-14 lg:p-20">
+            <Image
+              className="rounded-md shadow-md"
+              src={item.properties.Image.files[0].file.url}
+              alt="Picture of the author"
+              width={1792}
+              height={1024}
+            />
+          </div>
+          <div>{item.properties.Name.title[0]?.plain_text} (Coming Soon)</div>
+        </div>
+      )
+    })
 }
 
 export default async function IndexPage() {
   const homepageItems = await getHomepageItemsDatabase()
-  console.log("homepageItems")
   const homepageItemsComponents = buildHomepageItemComponents(homepageItems)
 
   return (
