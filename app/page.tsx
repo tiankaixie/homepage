@@ -2,13 +2,12 @@ import Image from "next/image"
 
 import { siteConfig } from "@/config/site"
 import { getHomepageItemsDatabase } from "@/lib/notion"
-import ParticleVis from "@/components/particle-vis"
 import { SocialNav } from "@/components/social-nav"
 
 const buildHomepageItemComponents = (items: any) => {
   return items.map((item: any) => {
     return (
-      <div className="col-span-12 bg-primary p-4 md:col-span-6 lg:col-span-4">
+      <div className="col-span-12 bg-primary p-4 md:col-span-6 lg:col-span-6 xl:col-span-4">
         <div className="flex aspect-square flex-col justify-center p-14 lg:p-20">
           <Image
             className="rounded-md shadow-md"
