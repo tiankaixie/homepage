@@ -47,7 +47,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="relative flex h-[calc(100vh-3rem)] flex-col overflow-auto rounded-md bg-background shadow-sm ">
             <div className="flex-1">{children}</div>
           </div>
-          {/* <TailwindIndicator /> */}
+          <TailwindIndicator />
           <FixedThemeToggle />
         </ThemeProvider>
       </body>

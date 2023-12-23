@@ -8,7 +8,7 @@ import { SocialNav } from "@/components/social-nav"
 const buildHomepageItemComponents = (items: any) => {
   return items.map((item: any) => {
     return (
-      <div className="col-span-4 bg-primary p-4 md:col-span-2 lg:col-span-1">
+      <div className="col-span-12 bg-primary p-4 md:col-span-6 lg:col-span-4">
         <div className="flex aspect-square flex-col justify-center p-14 lg:p-20">
           <Image
             className="rounded-md shadow-md"
@@ -43,7 +43,7 @@ export default async function IndexPage() {
         <hr className="border-t-1" />
       </div>
       <div className="col-span-12">
-        <div className="grid grid-cols-3 gap-2">{homepageItemsComponents}</div>
+        <div className="grid grid-cols-12 gap-2">{homepageItemsComponents}</div>
       </div>
       <div className="col-span-12 pt-4 ">
         <div className="hidden lg:block">
