@@ -48,7 +48,7 @@ export default async function IndexPage() {
         <hr className="border-t-1" />
       </div>
       <div className="col-span-12">
-        <div className="grid grid-cols-12 gap-2">{homepageItemsComponents}</div>
+        <div className="grid grid-cols-12 gap-5">{homepageItemsComponents}</div>
       </div>
       <div className="col-span-12 pt-4 ">
         <div className="hidden lg:block">
