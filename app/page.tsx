@@ -7,7 +7,7 @@ import { SocialNav } from "@/components/social-nav"
 const buildHomepageItemComponents = (items: any) => {
   return items
     .sort(
-      (a, b) =>
+      (a: any, b: any) =>
         a.properties.Name.title[0]?.plain_text.localeCompare(
           b.properties.Name.title[0]?.plain_text
         )
