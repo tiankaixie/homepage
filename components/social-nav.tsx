@@ -18,9 +18,9 @@ interface SocialNavProps {
 export function SocialNav({ items }: SocialNavProps) {
   const pathname = usePathname()
   return (
-    <div className="">
+  <>
       {items?.length ? (
-        <nav className="flex justify-center gap-1">
+        <>
           {items?.map(
             (item, index) =>
               item.href && (
@@ -28,27 +28,27 @@ export function SocialNav({ items }: SocialNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    " justify-start text-primary-foreground opacity-80"
+                    " justify-start"
                   )}
                 >
                   <div
                     className={cn(
                       buttonVariants({
-                        size: "sm",
-                        variant: "nav",
+                        size: "xs",
+                        variant: "link",
                       }),
                       `${
-                        pathname === item.href ? "bg-highlight shadow-md" : ""
+                        pathname === item.href ? "" : ""
                       }`
                     )}
                   >
-                    {generateIcon(item.title)}
+                     {item.title}
                   </div>
                 </Link>
               )
           )}
-        </nav>
+        </>
       ) : null}
-    </div>
+    </>
   )
 }

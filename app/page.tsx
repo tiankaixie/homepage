@@ -3,6 +3,7 @@ import Image from "next/image"
 import { siteConfig } from "@/config/site"
 import { getHomepageItemsDatabase } from "@/lib/notion"
 import { SocialNav } from "@/components/social-nav"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const buildHomepageFigure = (items: any) => {
   const item = items[0]
@@ -65,11 +66,8 @@ export default async function IndexPage() {
         </div>
 
         <div className="flex w-full flex-col justify-end items-end">
-            <div>Instagram </div>
-            <div>Google Scholar </div>
-            <div>CV </div>
-            <div>Github </div>
-            <div>Night </div>
+            <SocialNav items={siteConfig.socialNav}/>
+            <ThemeToggle/>
         </div>
       </section>
 

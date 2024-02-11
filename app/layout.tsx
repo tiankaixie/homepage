@@ -46,7 +46,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {/* <SiteSider /> */}
             <div className="flex-1">{children}</div>
           {/*<TailwindIndicator /> */}
-          <FixedThemeToggle />
         </ThemeProvider>
       </body>
     </html>
