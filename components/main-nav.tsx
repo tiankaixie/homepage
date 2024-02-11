@@ -18,9 +18,9 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   const pathname = usePathname()
   return (
-    <div className="">
+    <>
       {items?.length ? (
-        <nav className="flex flex-col gap-1">
+        <>
           {items?.map(
             (item, index) =>
               item.href && (
@@ -28,28 +28,27 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex w-full justify-start text-primary-foreground opacity-80"
+                    "justify-start"
                   )}
                 >
                   <div
                     className={cn(
                       buttonVariants({
-                        size: "sm",
-                        variant: "nav",
+                        size: "xs",
+                        variant: "link",
                       }),
                       `${
-                        pathname === item.href ? "bg-highlight shadow-md" : ""
+                        pathname === item.href ? "" : ""
                       }`
                     )}
                   >
-                    {generateIcon(item.title)}
-                    <span className="ml-3 text-xs">{item.title}</span>
+                    {item.title}
                   </div>
                 </Link>
               )
           )}
-        </nav>
+        </>
       ) : null}
-    </div>
+    </>
   )
 }

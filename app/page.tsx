@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site"
 import { getHomepageItemsDatabase } from "@/lib/notion"
 import { SocialNav } from "@/components/social-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { MainNav } from "@/components/main-nav"
 
 const buildHomepageFigure = (items: any) => {
   const item = items[0]
@@ -34,7 +35,7 @@ export default async function IndexPage() {
         <div className="col-span-6 w-full h-full">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold py-5">TIANKAI XIE</div>
-            <div className=""> XAI | HCI | Visual Analytics </div>
+            <div className=""> XAI &nbsp;  | &nbsp; HCI &nbsp; | &nbsp; Visual Analytics </div>
           </div>
 
         <div className="w-1/2 py-5">
@@ -57,10 +58,7 @@ export default async function IndexPage() {
             <div> CONTENTS </div>
           </div>
           <div className="col-span-6 h-60 flex flex-col justify-center ">
-            <div>Articles </div>
-            <div>Gallery </div>
-            <div>Projects </div>
-            <div>About me </div>
+            <MainNav items={siteConfig.mainNav}/>
           </div>
 
         </div>

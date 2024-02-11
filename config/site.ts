@@ -16,11 +16,11 @@ export const siteConfig = {
   ],
   mainNav: [
     {
-      title: "About",
+      title: "About Me",
       href: "/about",
     },
     {
-      title: "CV",
+      title: "Curriculum Vitae",
       href: "/cv",
     },
   ],
