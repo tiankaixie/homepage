@@ -38,13 +38,13 @@ export type SiteConfig = {
 };
 
 const siteConfig: SiteConfig = {
-    title: 'Dante',
-    subtitle: 'Minimal Astro.js theme',
-    description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
-    image: {
-        src: '/dante-preview.jpg',
-        alt: 'Dante - Astro.js and Tailwind CSS theme'
-    },
+    title: 'Tiankai Xie',
+    subtitle: 'Visual Analytics / HCI / XAI',
+    description: 'Tiankai Xie\'s Homepage',
+    // image: {
+    //     src: '/dante-preview.jpg',
+    //     alt: 'Dante - Astro.js and Tailwind CSS theme'
+    // },
     headerNavLinks: [
         {
             text: 'Home',
@@ -55,7 +55,7 @@ const siteConfig: SiteConfig = {
             href: '/projects'
         },
         {
-            text: 'Blog',
+            text: 'Articles',
             href: '/blog'
         },
         {
@@ -75,33 +75,33 @@ const siteConfig: SiteConfig = {
         {
             text: 'Terms',
             href: '/terms'
-        },
-        {
-            text: 'Download theme',
-            href: 'https://github.com/JustGoodUI/dante-astro-theme'
         }
     ],
     socialLinks: [
+        // {
+        //     text: 'Dribbble',
+        //     href: 'https://dribbble.com/'
+        // },
         {
-            text: 'Dribbble',
-            href: 'https://dribbble.com/'
+            text: 'Google Scholar',
+            href: 'https://scholar.google.com/citations?user=iGRSrJUAAAAJ&hl=en&inst=1960582506653781529&oi=ao'
         },
         {
             text: 'Instagram',
-            href: 'https://instagram.com/'
+            href: 'https://instagram.com/tiankaixie'
         },
         {
-            text: 'X/Twitter',
-            href: 'https://twitter.com/'
+            text: 'X',
+            href: 'https://x.com/tiankaixie'
         }
     ],
     hero: {
-        title: 'Hi There & Welcome to My Corner of the Web!',
-        text: "I'm **Ethan Donovan**, a web developer at Amazing Studio, dedicated to the realms of collaboration and artificial intelligence. My approach involves embracing intuition, conducting just enough research, and leveraging aesthetics as a catalyst for exceptional products. I have a profound appreciation for top-notch software, visual design, and the principles of product-led growth. Feel free to explore some of my coding endeavors on <a href='https://github.com/JustGoodUI/dante-astro-theme'>GitHub</a> or follow me on <a href='https://twitter.com/justgoodui'>Twitter/X</a>.",
-        image: {
-            src: '/hero.jpeg',
-            alt: 'A person sitting at a desk in front of a computer'
-        },
+        // title: 'Hi there, welcome to my homepage!',
+        text: "I'm Tiankai Xie, a Postdoctoral Research Scholar at Arizona State University, deeply immersed in the realms of Interpretable Machine Learning, Human-Computer Interaction, and Visual Analytics. My journey is driven by a passion for making technology accessible through transparent AI algorithms and crafting seamless, intuitive interfaces that enhance Human-Computer Interaction. My expertise in Visual Analytics enables me to decode complex data patterns, facilitating insightful decision-making. With a steadfast commitment to innovative research and engineering, I envision a future where technology unites us, fostering a harmonious blend of innovation and human understanding.",
+        // image: {
+        //     src: '/hero.jpeg',
+        //     alt: 'A person sitting at a desk in front of a computer'
+        // },
         actions: [
             {
                 text: 'Get in Touch',
@@ -110,8 +110,8 @@ const siteConfig: SiteConfig = {
         ]
     },
     subscribe: {
-        title: 'Subscribe to Dante Newsletter',
-        text: 'One update per week. All the latest posts directly in your inbox.',
+        title: 'Subscribe to Tiankai Newsletter',
+        text: 'All the latest articles directly in your inbox.',
         formUrl: '#'
     },
     postsPerPage: 8,

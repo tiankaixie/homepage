@@ -22,6 +22,23 @@
     },
     "typescript.tsdk": "node_modules/typescript/lib",
     "files.associations": {
-        "*.css": "tailwindcss",
+        "*.css": "tailwindcss"
+    },
+    "workbench.colorCustomizations": {
+        "[Solarized Dark+ (Beta)]": {
+            "editor.background": "#0E2A35",
+            "sideBar.background": "#0E2A35",
+            "titleBar.activeBackground": "#0E2A35",
+            "tab.activeBackground": "#0E2A35",
+            "tab.activeBorder": "#818c8d",
+            "tab.inactiveBackground": "#0E2A35",
+            "editorGutter.background": "#0E2A35",
+            "statusBar.background": "#081f28",
+            "statusBar.foreground": "#818c8d",
+            "statusBarItem.remoteBackground": "#20333A",
+            "terminal.background": "#0E2A35"
+        },
+        "minimap.background": "#00000000",
+        "scrollbar.shadow": "#00000000"
     }
 }
